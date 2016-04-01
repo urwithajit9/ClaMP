@@ -3,7 +3,7 @@
 A Malware classifier dataset built with header fields’ values of Portable Executable files
 
 <p align="center">
-<img width="700px" src="ClaMP-process.jpg" alt="Malware"/>
+<img width="700px" src="ClaMP-process.jpg" alt="ClaMP process diagram"/>
 </p>
 
 # Dataset files
@@ -133,3 +133,8 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
     This file have Virus Total report of all malware samples (with some zipped that is not used in analysis, 3817). File contains information like,
 
     - *MD5hash, Total, Positive, TrendMicro, F-Secure, McAfee, Symantec, Avast, Kaspersky,  BitDefender, Sophos, GData, Panda, Qihoo-360, Scan-Date*
+
+### Features with their description
+    S.NO | Feature | Type | Description
+    -----|-------- | -----| ------
+    01 | e_magic | Integer | It is in the DOS_HEADER and it must be same for all.
