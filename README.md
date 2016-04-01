@@ -15,5 +15,12 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 	- Total samples	: 5184 (Malware ()+ Benign())
 	- Features (55)	: Raw Features(55)
 
+# Raw samples metadata information
+
+1. Malware-2722_hash_size_entropy.csv  
+    This file have filename (Hash) , filesize in bytes, and Entropy of each malware sample a Total of 2722.
+2. Clean-2501_name_size_entropy.csv  
+    This file have filename, filesize in bytes, and Entropy of each clean sample, which where collected after fresh installed Windows OS (XP and Windows7) a Total of 2501.
+
 
 # Scripts files
