@@ -95,11 +95,13 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 
 11. **filetype.sh**
 
-        A Simple shell script to use Linux's file command to test file type of all files in given directory. Later the output text file can be parse to create some report.
+        A Simple shell script to use Linux's file command to test file type of all files
+        in given directory. Later the output text file can be parse to create some report.
 
 12. **CSVToARFF.py**
 
-        This python script convert CSV file to ARFF (default WEKA file). For detail see the header part of script. It is an updated code on a earlier code on github. Please see header for detail.
+        This python script convert CSV file to ARFF (default WEKA file). For detail see the
+        header part of script. It is an updated code on a earlier code on github. Please see header for detail.
 
 
 
