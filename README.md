@@ -93,6 +93,10 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 
       This is kind of supportive script to automate the process of selecting samples from initial samples according to the detection result of  VirusTotal. Suppose, we only want to keep those sample as benign for which none of the AVs have given malware flag. This will also move samples for which past analysis result is not available at VirusTotal (Because we are not submitting sample instead getting result by MD5).Script will move the samples to a new folder according to /notbenign and /noreport.
 
+11. **filetype.sh**
+
+        A Simple shell script to use Linux's file command to test file type of all files in given directory. Later the output text file can be parse to create some report.
+
 
 
 # Raw samples metadata information
