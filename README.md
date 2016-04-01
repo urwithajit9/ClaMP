@@ -45,6 +45,10 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 
       This file have list of clean files which are not Portable Executable (PE) file format.
 
+9.  Malware_VT_report_without_Zipped_3817.csv  
+    
+    This file have Virus Total report of all malware samples (with some zipped that is not used in analysis, 3817). File contains information like,
+    MD5hash,Total,Positive,TrendMicro,F-Secure,McAfee,Symantec,Avast,Kaspersky,BitDefender,Sophos,GData,Panda,Qihoo-360,Scan-Date
 
 
 
