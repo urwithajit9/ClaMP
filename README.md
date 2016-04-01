@@ -2,6 +2,10 @@
 
 A Malware classifier dataset built with header fields’ values of Portable Executable files
 
+<p align="center">
+<img width="700px" src="ClaMP-process.jpg" alt="Malware"/>
+</p>
+
 # Dataset files
 1. ClaMP_Integrated-5184.arff
 	- Total samples	: 5184 (Malware () + Benign())
