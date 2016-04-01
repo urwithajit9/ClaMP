@@ -85,6 +85,11 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
     - *"TrendMicro", "F-Secure", "McAfee", "Symantec", "Avast", "Kaspersky",*
     - *"BitDefender", "Sophos", "GData", "Panda", "Qihoo-360",  "Scan-Date"*
 
+ 10. **select_benign_sample_as_VT_report.py**   
+
+      This is kind of supportive script to automate the process of selecting samples from initial samples according to the detection result of  VirusTotal. Suppose, we only want to keep those sample as benign for which none of the AVs have given malware flag. This will also move samples for which past analysis result is not available at VirusTotal (Because we are not submitting sample instead getting result by MD5).Script will move the samples to a new folder according to /notbenign and /noreport.
+
+
 
 # Raw samples metadata information
 
