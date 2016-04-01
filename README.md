@@ -80,5 +80,7 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 6. integrated_features_extraction.py    
 
     This is one of main file for creating dataset, it will extract integrated features of given samples. User have to supply malware and benign samples path in two different run and supplying the class label accordingly. Currently, user have to merge extracted   features manually for both classes to create overall dataset.
-    
+
 7. raw_features_extraction.py    
+
+    This is another important script which extract all the values from all three main PE headers. DOS_Header, FILE_HEADER AND OPTIONAL_HEADER. If any exception happens  then the values will be assigned as zero for that header. Say, many PE files don't have DOS_Header then all the header will be assigned '0'.
