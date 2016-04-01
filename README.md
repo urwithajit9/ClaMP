@@ -22,6 +22,8 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 	- Features (55)	: Raw Features(55)
 
 # Scripts files
+  Note: For many purposes the [pefile](https://github.com/erocarrera/pefile) have been used.
+    I want to thank Ero Carrera for creating the great tool **pefile**.
 
 1. **move_duplicate_files.py**
       This python script will move the duplicates files based on their MD5 and will give file information report as CSV file. ( Look into script header for detail working)
