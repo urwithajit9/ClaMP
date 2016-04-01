@@ -84,3 +84,23 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 7. raw_features_extraction.py    
 
     This is another important script which extract all the values from all three main PE headers. DOS_Header, FILE_HEADER AND OPTIONAL_HEADER. If any exception happens  then the values will be assigned as zero for that header. Say, many PE files don't have DOS_Header then all the header will be assigned '0'.
+
+    - IMAGE_DOS_HEADER (19)
+      - "e_magic", "e_cblp", "e_cp","e_crlc","e_cparhdr",
+      - "e_minalloc","e_maxalloc","e_ss","e_sp",
+      - "e_csum","e_ip","e_cs","e_lfarlc","e_ovno","e_res",
+      - "e_oemid","e_oeminfo","e_res2","e_lfanew"
+
+    - FILE_HEADER (7)
+      - "Machine","NumberOfSections","CreationYear","PointerToSymbolTable",
+      - "NumberOfSymbols","SizeOfOptionalHeader","Characteristics"
+       
+    - OPTIONAL_HEADER   (29)
+      - "Magic","MajorLinkerVersion","MinorLinkerVersion","SizeOfCode", "SizeOfInitializedData",
+      - "SizeOfUninitializedData","AddressOfEntryPoint",
+      - "BaseOfCode","BaseOfData","ImageBase","SectionAlignment","FileAlignment",
+      - "MajorOperatingSystemVersion","MinorOperatingSystemVersion",
+      - "MajorImageVersion",  "MinorImageVersion",  "MajorSubsystemVersion",
+      - "MinorSubsystemVersion",  "SizeOfImage",  "SizeOfHeaders",  "CheckSum",
+      - "Subsystem",  "DllCharacteristics",  "SizeOfStackReserve",  "SizeOfStackCommit",
+      - "SizeOfHeapReserve",  "SizeOfHeapCommit",  "LoaderFlags",  "NumberOfRvaAndSizes"
