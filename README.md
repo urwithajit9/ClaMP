@@ -52,11 +52,17 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
       - etc..
 6. **integrated_features_extraction.py**    
 
-      This is one of main file for creating dataset, it will extract integrated features of given samples. User have to supply malware and benign samples path in two different run and supplying the class label accordingly. Currently, user have to merge extracted   features manually for both classes to create overall dataset.
+      This is one of main file for creating dataset, it will extract integrated features
+       of given samples. User have to supply malware and benign samples path in two
+        different run and supplying the class label accordingly. Currently, user
+        have to merge extracted   features manually for both classes to create overall dataset.
 
 7. **raw_features_extraction.py**    
 
-      This is another important script which extract all the values from all three main PE headers. DOS_Header, FILE_HEADER AND OPTIONAL_HEADER. If any exception happens  then the values will be assigned as zero for that header. Say, many PE files don't have DOS_Header then all the header will be assigned '0'.
+      This is another important script which extract all the values from all three main
+      PE headers. DOS_Header, FILE_HEADER AND OPTIONAL_HEADER. If any exception happens      
+      then the values will be assigned as zero for that header. Say, many
+      PE files don't have DOS_Header then all the header will be assigned '0'.
 
       - IMAGE_DOS_HEADER (19)
         - "e_magic", "e_cblp", "e_cp","e_crlc","e_cparhdr",
@@ -69,7 +75,7 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
         - "NumberOfSymbols","SizeOfOptionalHeader","Characteristics"
 
       - OPTIONAL_HEADER   (29)
-        - "Magic","MajorLinkerVersion","MinorLinkerVersion","SizeOfCode", "SizeOfInitializedData",
+        - "Magic","MajorLinkerVersion","MinorLinkerVersion","SizeOfCode","SizeOfInitializedData",
         - "SizeOfUninitializedData","AddressOfEntryPoint",
         - "BaseOfCode","BaseOfData","ImageBase","SectionAlignment","FileAlignment",
         - "MajorOperatingSystemVersion","MinorOperatingSystemVersion",
@@ -80,13 +86,17 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 
 8. **select_malware_sample_as_VT_report.py**      
 
-        This is kind of supportive script to automate the process of selecting samples from initial samples according to the detection result of top 10 Anti-virus engines at VirusTotal. Suppose, we only want to keep those sample as malware for which out 9 out
+        This is kind of supportive script to automate the process of selecting samples
+         from initial samples according to the detection result of top 10 Anti-virus
+         engines at VirusTotal. Suppose, we only want to keep those sample as malware
+         for which out 9 out
         of 10 AV have given malware flag. By changing threshold value we can have
         different group of samples. Script will move the samples to a new folder.
 
 9. **malware-labeling.py**  
 
-      This script will take a csv file with MD5 hash as input and it will read all MD5 and will fetch the VirusTotal report on each MD5 and after receiving and parsing the report,
+      This script will take a csv file with MD5 hash as input and it will read all MD5 and
+      will fetch the VirusTotal report on each MD5 and after receiving and parsing the report,
       will write them to a CSV file path/report.csv.  The CSV file header will have fields as
 
     - *"MD5hash", "Total", "Positive",*
@@ -95,9 +105,13 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 
 10. **select_benign_sample_as_VT_report.py**   
 
-        This is kind of supportive script to automate the process of selecting samples from initial samples according to the detection result of  VirusTotal. Suppose, we only want
-        to keep those sample as benign for which none of the AVs have given malware flag. This will also move samples for which past analysis result is not available at VirusTotal (Because we are not submitting sample instead getting result by MD5).Script will move
-         the samples to a new folder according to /notbenign and /noreport.
+        This is kind of supportive script to automate the process of selecting samples from
+        initial samples according to the detection result of  VirusTotal. Suppose,
+        we only want to keep those sample as benign for which none of the AVs have
+        given malware flag. This will also move samples for which past analysis
+        result is not available at VirusTotal (Because we are not submitting
+        sample instead getting result by MD5).Script will move  the samples
+        to a new folder according to /notbenign and /noreport.
 
 11. **filetype.sh**
 
@@ -107,11 +121,13 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 12. **CSVToARFF.py**
 
         This python script convert CSV file to ARFF (default WEKA file). For detail see the
-        header part of script. It is an updated code on a earlier code on github. Please see header for detail.
+        header part of script. It is an updated code on a earlier code on github.
+        Please see header for detail.
 
 13.  **peid.yara**
 
-        This the PEiD's packers signature converted as yara rules. Used in integrated_features_extraction. Please refer feature_extraction file.
+        This the PEiD's packers signature converted as yara rules.
+        Used in integrated_features_extraction. Please refer feature_extraction file.
 
 
 
