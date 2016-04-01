@@ -1,4 +1,4 @@
-@relation 'pe_header_dataset_mal_clean_garbage_removed-weka.filters.unsupervised.attribute.NumericToNominal-R1,20,22,26,27,49,56'
+@relation 'ClaMP_Raw-5184-weka.filters.unsupervised.attribute.NumericToNominal-R1,20,22,26,27,49,56'
 
 @attribute e_magic {23117}
 @attribute e_cblp numeric

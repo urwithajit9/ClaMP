@@ -46,7 +46,7 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
       This file have list of clean files which are not Portable Executable (PE) file format.
 
 9.  Malware_VT_report_without_Zipped_3817.csv  
-    
+
     This file have Virus Total report of all malware samples (with some zipped that is not used in analysis, 3817). File contains information like,
     MD5hash,Total,Positive,TrendMicro,F-Secure,McAfee,Symantec,Avast,Kaspersky,BitDefender,Sophos,GData,Panda,Qihoo-360,Scan-Date
 
@@ -54,6 +54,9 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 
 # Scripts files
 
-1. calculate_size_and_entropy.py
+1. move_duplicate_files.py
+    This python script will move the duplicates files based on their MD5 and will give file information report as CSV file. ( Look into script header for detail working)
+
+2. calculate_size_and_entropy.py
 
     This python script will calculate size and entropy of all files present in given directory and will write these information with file name to a .csv file.
