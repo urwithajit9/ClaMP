@@ -94,7 +94,7 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
     - FILE_HEADER (7)
       - "Machine","NumberOfSections","CreationYear","PointerToSymbolTable",
       - "NumberOfSymbols","SizeOfOptionalHeader","Characteristics"
-       
+
     - OPTIONAL_HEADER   (29)
       - "Magic","MajorLinkerVersion","MinorLinkerVersion","SizeOfCode", "SizeOfInitializedData",
       - "SizeOfUninitializedData","AddressOfEntryPoint",
@@ -104,3 +104,7 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
       - "MinorSubsystemVersion",  "SizeOfImage",  "SizeOfHeaders",  "CheckSum",
       - "Subsystem",  "DllCharacteristics",  "SizeOfStackReserve",  "SizeOfStackCommit",
       - "SizeOfHeapReserve",  "SizeOfHeapCommit",  "LoaderFlags",  "NumberOfRvaAndSizes"
+
+8. select_malware_sample_as_VT_report.py      
+
+    This is kind of supportive script to automate the process of selecting samples from initial samples according to the detection result of top 10 Anti-virus engines at VirusTotal. Suppose, we only want to keep those sample as malware for which out 9 out of 10 AV have given malware flag. By changing threshold value we can have different group of samples. Script will move the samples to a new folder. 
