@@ -77,3 +77,8 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
     - ProductName
     - CompanyName
     - etc..
+6. integrated_features_extraction.py    
+
+    This is one of main file for creating dataset, it will extract integrated features of given samples. User have to supply malware and benign samples path in two different run and supplying the class label accordingly. Currently, user have to merge extracted   features manually for both classes to create overall dataset.
+    
+7. raw_features_extraction.py    
