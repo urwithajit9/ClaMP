@@ -80,7 +80,9 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 
 8. **select_malware_sample_as_VT_report.py**      
 
-        This is kind of supportive script to automate the process of selecting samples from initial samples according to the detection result of top 10 Anti-virus engines at VirusTotal. Suppose, we only want to keep those sample as malware for which out 9 out of 10 AV have given malware flag. By changing threshold value we can have different group of samples. Script will move the samples to a new folder.
+        This is kind of supportive script to automate the process of selecting samples from initial samples according to the detection result of top 10 Anti-virus engines at VirusTotal. Suppose, we only want to keep those sample as malware for which out 9 out
+        of 10 AV have given malware flag. By changing threshold value we can have
+        different group of samples. Script will move the samples to a new folder.
 
 9. **malware-labeling.py**  
 
@@ -93,7 +95,9 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 
 10. **select_benign_sample_as_VT_report.py**   
 
-        This is kind of supportive script to automate the process of selecting samples from initial samples according to the detection result of  VirusTotal. Suppose, we only want to keep those sample as benign for which none of the AVs have given malware flag. This will also move samples for which past analysis result is not available at VirusTotal (Because we are not submitting sample instead getting result by MD5).Script will move the samples to a new folder according to /notbenign and /noreport.
+        This is kind of supportive script to automate the process of selecting samples from initial samples according to the detection result of  VirusTotal. Suppose, we only want
+        to keep those sample as benign for which none of the AVs have given malware flag. This will also move samples for which past analysis result is not available at VirusTotal (Because we are not submitting sample instead getting result by MD5).Script will move
+         the samples to a new folder according to /notbenign and /noreport.
 
 11. **filetype.sh**
 
