@@ -62,7 +62,7 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
     This python script will calculate size and entropy of all files present in given directory and will write these information with file name to a .csv file.
 
 3. benign-labeling.py
-  This script will take a csv file with MD5 hash as input and it will read all MD5 and will fetch the VirusTotal report on each MD5 and after receiveing and parsing the report
+  This script will take a csv file with MD5 hash as input and it will read all MD5 and will fetch the VirusTotal report on each MD5 and after receiving and parsing the report
    will write them to a CSV file path/report.csv.  The CSV file header will have fields as
     [ID,fileName,MD5hash,Total,Positive,type-TrendMicro,type-F-secure,Scan-Date]
 
@@ -107,4 +107,13 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 
 8. select_malware_sample_as_VT_report.py      
 
-    This is kind of supportive script to automate the process of selecting samples from initial samples according to the detection result of top 10 Anti-virus engines at VirusTotal. Suppose, we only want to keep those sample as malware for which out 9 out of 10 AV have given malware flag. By changing threshold value we can have different group of samples. Script will move the samples to a new folder. 
+    This is kind of supportive script to automate the process of selecting samples from initial samples according to the detection result of top 10 Anti-virus engines at VirusTotal. Suppose, we only want to keep those sample as malware for which out 9 out of 10 AV have given malware flag. By changing threshold value we can have different group of samples. Script will move the samples to a new folder.
+
+9. malware-labeling.py  
+
+  This script will take a csv file with MD5 hash as input and it will read all MD5 and will fetch the VirusTotal report on each MD5 and after receiving and parsing the report,
+  will write them to a CSV file path/report.csv.  The CSV file header will have fields as
+
+  - "MD5hash","Total","Positive",
+  - "TrendMicro","F-Secure","McAfee","Symantec","Avast","Kaspersky",
+  - "BitDefender","Sophos","GData","Panda","Qihoo-360",  "Scan-Date"
