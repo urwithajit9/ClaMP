@@ -16,39 +16,43 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 	- Features (55)	: Raw Features(55)
 
 # Raw samples metadata information
-1. Clean_md5_2917.csv
+
+1. **Clean_md5_2917.csv**
 
     This file have filename,MD5 hash and size for all clean samples (2917) collected for experiment.
 
-2. Malware_md5_2917.csv    
+2. **Malware_md5_2917.csv**    
 
     This file have filename,MD5 hash and size for all malware samples (2917) collected for experiment.
 
-3. Clean_md5_without_dup_2873.csv
-     This file have filename,MD5 hash and size without any duplicate clean samples (2873).
-
-4. Malware_md5_without_dup_2873.csv   
+3. **Clean_md5_without_dup_2873.csv**
 
      This file have filename,MD5 hash and size without any duplicate clean samples (2873).
-5. Malware-2722_hash_size_entropy.csv  
 
-    This file have filename (Hash) , filesize in bytes, and Entropy of each malware sample a Total of 2722.
+4. **Malware_md5_without_dup_2873.csv**   
 
-6. Clean-2501_name_size_entropy.csv  
+     This file have filename,MD5 hash and size without any duplicate clean samples (2873).
+5. **Malware-2722_hash_size_entropy.csv**  
 
-    This file have filename, filesize in bytes, and Entropy of each clean sample, which where collected after fresh installed Windows OS (XP and Windows7) a Total of 2501.
+    This file have filename (Hash) , file-size in bytes, and Entropy of each malware sample a Total of 2722.
 
-7. Clean_VT_report-2873.csv    
-    This file have Virus Total report of all clean samples (without duplicate, 2873). File                contains information like, ID,fileName,MD5Hash,Total,Positive,Type-TrendMicro,Type-F-secure,Scan-Date.
+6. **Clean-2501_name_size_entropy.csv**  
 
-8.  Clean_NOT_PE_6.txt  
+    This file have filename, file-size in bytes, and Entropy of each clean sample, which where collected after fresh installed Windows OS (XP and Windows7) a Total of 2501.
+
+7. **Clean_VT_report-2873.csv**    
+    This file have Virus Total report of all clean samples (without duplicate, 2873). File                contains information like:
+    - *ID, fileName, MD5Hash, Total, Positive, Type-TrendMicro, Type-F-secure, Scan-Date.*
+
+8.  **Clean_NOT_PE_6.txt**  
 
       This file have list of clean files which are not Portable Executable (PE) file format.
 
-9.  Malware_VT_report_without_Zipped_3817.csv  
+9.  **Malware_VT_report_without_Zipped_3817.csv**  
 
     This file have Virus Total report of all malware samples (with some zipped that is not used in analysis, 3817). File contains information like,
-    MD5hash,Total,Positive,TrendMicro,F-Secure,McAfee,Symantec,Avast,Kaspersky,BitDefender,Sophos,GData,Panda,Qihoo-360,Scan-Date
+
+    - *MD5hash, Total, Positive, TrendMicro, F-Secure, McAfee, Symantec, Avast, Kaspersky,  BitDefender, Sophos, GData, Panda, Qihoo-360, Scan-Date*
 
 
 
