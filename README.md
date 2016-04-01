@@ -60,3 +60,12 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 2. calculate_size_and_entropy.py
 
     This python script will calculate size and entropy of all files present in given directory and will write these information with file name to a .csv file.
+
+3. benign-labeling.py
+  This script will take a csv file with MD5 hash as input and it will read all MD5 and will fetch the VirusTotal report on each MD5 and after receiveing and parsing the report
+   will write them to a CSV file path/report.csv.  The CSV file header will have fields as
+    [ID,fileName,MD5hash,Total,Positive,type-TrendMicro,type-F-secure,Scan-Date] 
+
+4. get_all_md5.py       
+
+    This is very simple script make use of python MD5 function to calculate MD5 hash of all files in given directory. filename and their MD5 written to a csv file to later use. This file can be use with benign-abeling.py script to get VirusTotal report.
