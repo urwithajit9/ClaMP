@@ -7,11 +7,11 @@ A Malware classifier dataset built with header fields’ values of Portable Exec
 </p>
 
 # Dataset files
-1. ClaMP_Integrated-5184.arff
-	- Total samples	: 5184 (Malware () + Benign())
+1. ClaMP_Integrated-5210.arff
+	- Total samples	: 5210 (Malware (2722) + Benign(2488))
 	- Features (69)	: Raw Features (54) + Derived Features(15)
 2. ClaMP_Raw-5184.arff
-	- Total samples	: 5184 (Malware ()+ Benign())
+	- Total samples	: 5184 (Malware (2683)+ Benign(2501))
 	- Features (55)	: Raw Features(55)
 
 3. ClaMP_Integrated-5184.csv
