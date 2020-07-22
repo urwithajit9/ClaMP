@@ -18,9 +18,11 @@
 #Need to install yara and pefile external python module
 # Need to compile PEiD signatures as yara rules ( scripts are available online, later i will upload this too)
 
-# Change at line 79 self.rules= yara.compile(filepath='/home/user/ClaMP/yara/peid.yara') to your comple rules
+# Change at line 79 , if you have your known yara rules.
 
+#self.rules= yara.compile(filepath='peid.yara') 
 
+#Note : Added UserDB.txt and peid.yara to scripts folder. These are taken from Interent source.
 
 import csv,os,pefile
 import yara
@@ -78,7 +80,7 @@ class pe_features():
         self.output = output
         self.type = label
 	#Need PEiD rules compile with yara
-        self.rules= yara.compile(filepath='/home/user/ClaMP/yara/peid.yara')
+        self.rules= yara.compile(filepath='peid.yara')
         
 
     def file_creation_year(self,seconds):
@@ -233,10 +235,12 @@ class pe_features():
     def check_packer(self,filepath):
         result=[]
         matches = self.rules.match(filepath)
-        if matches == {}:
+        print(matches)
+        if matches == []:
             result.append([0,"NoPacker"])
         else:
-            result.append([1,matches['main'][0]['rule']])
+            #result.append([1,matches['main'][0]['rule']])
+            result.append([1,matches[0]])
         return result
 
     def get_text_data_entropy(self,pe):
