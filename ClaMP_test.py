@@ -130,20 +130,20 @@ def extract_features(pe):
 
     return IMAGE_DOS_HEADER_data + FILE_HEADER_data + OPTIONAL_HEADER_data
 
+def scan_file(filepath):
+    scan_result=""
+    pe = pefile.PE(filepath)
+    features = extract_features(pe)
+    df_test = pd.DataFrame([features])
+    clf = load("/home/ajit/clamp/random_forest_53_raw_features.joblib")
+    result = clf.predict(df_test)
+    if result[0]==0:
+        scan_result= "Benign file."
+    else:
+        scan_result = "Malicious file."
+    return scan_result
 
 
 if __name__ == '__main__':
-
-    pe =  pefile.PE(sys.argv[1])
-
-    features = extract_features(pe)
-    #print(features)
-
-    df_test = pd.DataFrame([features])
-    clf = load("random_forest_53_raw_features.joblib")
-    result = clf.predict(df_test)
-
-    if result[0]==0:
-        print("Benign file.")
-    else:
-        print("Malicious file.")
+    result = scan_file(sys.argv[1])
+    print(result)
