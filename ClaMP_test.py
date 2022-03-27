@@ -135,7 +135,7 @@ def scan_file(filepath):
     pe = pefile.PE(filepath)
     features = extract_features(pe)
     df_test = pd.DataFrame([features])
-    clf = load("/home/ajit/clamp/random_forest_53_raw_features.joblib")
+    clf = load("random_forest_53_raw_features.joblib")
     result = clf.predict(df_test)
     if result[0]==0:
         scan_result= "Benign file."
