@@ -1,0 +1,6 @@
+joblib==1.2.0
+pandas==1.4.1
+pefile==2019.4.18
+simplejson==3.17.2
+yara==1.7.7
+yara_python==4.0.2
